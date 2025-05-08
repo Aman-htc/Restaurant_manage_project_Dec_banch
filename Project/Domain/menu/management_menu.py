@@ -4,8 +4,70 @@
 import json
 import datetime
 from All_path.path import Menu_path
-from Report.check_details import all_data_check_menu
+from Report.check_details import all_data_check
 from Error_handal.logger import write_logs
+
+class Restaurant_Menu:
+    def __init__(self, path):
+        self.path = path 
+
+    # Save the current menu list to a JSON file
+    def save_menu_details(self):
+        with open(self.path, 'w') as file:
+            json.dump(self.menu_list, file, indent=4)
+
+    # Define the menu items for breakfast and lunch
+    def menu_details(self):
+        try:
+            self.menu_list = []
+            print('---------Restaurant Menu-------------')
+
+            # Define Breakfast menu
+            self.Breakfast_menu = [
+                {'id': 1, 'type': 'full', 'name': 'aloo paratha-f', 'price': 50},
+                {'id': 2, 'type': 'haph', 'name': 'allo paratha-h', 'price': 30},
+                {'id': 3, 'type': 'full', 'name': 'chana ghugni-f', 'price': 40},
+                {'id': 4, 'type': 'haph', 'name': 'chana ghugani-h', 'price': 20},
+                {'id': 5, 'type': 'full', 'name': 'sattu paratha-f', 'price': 50},
+                {'id': 6, 'type': 'haph', 'name': 'sattu paratha-h', 'price': 30},
+                {'id': 7, 'type': '100g', 'name': 'jalebi-g', 'price': 40},
+                {'id': 8, 'type': 'haph', 'name': 'chai-h', 'price': 20},
+                {'id': 9, 'type': 'full', 'name': 'salad-f', 'price': 40},
+                {'id': 10, 'type': 'haph', 'name': 'salad-h', 'price': 20}
+            ]
+
+            # Define Lunch menu
+            self.Lunch_menu = [
+                {'id': 1, 'type': 'full', 'name': 'litte chokha-f', 'price': 60},
+                {'id': 2, 'type': 'haph', 'name': 'litte chokha-h', 'price': 30},
+                {'id': 3, 'type': 'full', 'name': 'rice dal-f', 'price': 70},
+                {'id': 4, 'type': 'haph', 'name': 'rice dal-h', 'price': 40},
+                {'id': 5, 'type': 'full', 'name': 'paneer butter masala-f', 'price': 200},
+                {'id': 6, 'type': 'haph', 'name': 'paneer butter masala-h', 'price': 110},
+                {'id': 7, 'type': 'full', 'name': 'shahi paneer-f', 'price': 180},
+                {'id': 8, 'type': 'haph', 'name': 'shahi paneer-h', 'price': 100},
+                {'id': 9, 'type': 'full', 'name': 'plain rice-f', 'price': 50},
+                {'id': 10, 'type': 'haph', 'name': 'roti-h', 'price': 50},
+                {'id': 11, 'type': 'full', 'name': 'kadhi chawal-f', 'price': 120},
+                {'id': 12, 'type': 'haph', 'name': 'kadhi chawal-h', 'price': 70}
+            ]
+
+            # Append both menus to the main list
+            self.menu_list.append(self.Breakfast_menu)
+            self.menu_list.append(self.Lunch_menu)
+
+        except Exception as e:
+            date = datetime.datetime.now()
+            error_list = {'error': str(e), 'function_name': 'menu_details', 'class': 'Restaurant', 'date': date}
+
+# call Restaurant menu 
+def menu_item():
+    data = Restaurant_Menu(Menu_path)
+    data.menu_details()
+    data.save_menu_details()
+    
+            
+
 
 # Class to manage restaurant menu (add/remove items from Breakfast or Lunch menus)
 class Manage_Restaurant:
@@ -46,11 +108,13 @@ class Manage_Restaurant:
                         self.item_list['price'] = self.item_price
                         self.item_list['type'] = self.item_category
                         # Add to breakfast menu
-                        self.menu_details[0].append(self.item_list)  
+                        self.menu_details[0].append(self.item_list) 
+                        print('add successfully!') 
 
                         # Save updated menu to file
                         with open(self.path, 'w') as file:
                             json.dump(self.menu_details, file, indent=4)
+                            
 
                     # Add item to lunch menu
                     elif staff == 2:
@@ -65,6 +129,7 @@ class Manage_Restaurant:
                         self.item_list['type'] = self.item_category  
                     
                         self.menu_details[1].append(self.item_list) 
+                        print('add successfully!') 
 
                         # Save updated menu to file
                         with open(self.path, 'w') as file:
@@ -72,8 +137,16 @@ class Manage_Restaurant:
 
                     # Remove item from breakfast menu by index
                     elif staff == 3:
-                        index_number = int(input('Enter item index number to remove: '))
-                        self.menu_details[0].pop(index_number)
+                        while True:
+                            
+                            index_number =input('Enter item index number to remove: ')
+                            if index_number.isdigit():
+                                index_number =int(index)
+                                self.menu_details[0].pop(index_number)
+                                print('remove successfully!')
+                                
+                            else:
+                                print('please enter digit number!')
 
                         # Save only breakfast menu to file
                         with open(self.path, 'w') as file:
@@ -81,9 +154,14 @@ class Manage_Restaurant:
 
                     # Remove item from lunch menu by index
                     elif staff == 4:
-                        index_number = int(input('Enter item index number to remove: '))
-                        self.menu_details[1].pop(index_number)
-
+                        index_number =input('Enter item index number to remove: ')
+                            if index_number.isdigit():
+                                index_number =int(index)
+                                self.menu_details[1].pop(index_number)
+                                print('remove successfully!')
+                                break
+                            else:
+                                print('please enter digit number!')
                         # Save full menu again
                         with open(self.path, 'w') as file:
                             json.dump(self.menu_details, file, indent=4)
@@ -122,10 +200,11 @@ def manage_and_report():
         try:
             input_number = int(input('Select any option: '))
             if input_number == 1:
+                menu_item()
                 # Open item manager
                 item_manage()  
             elif input_number == 2:
-                all_data_check_menu()  
+                all_data_check()  
             elif input_number == 3:
                 break  
             else:
