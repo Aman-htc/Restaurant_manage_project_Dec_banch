@@ -1,5 +1,7 @@
 import json
 import time
+import getpass
+
 
 from All_path.path import Sign_up_path 
 
@@ -60,7 +62,8 @@ class Login_Staff:
                 
                                 
             while True:
-                input_data=input('please enter your password :  ')
+                input_data= getpass.getpass('please enter your password :  ')
+        
                 print('Searching',end='')
                 for n in range(5):
                     time.sleep(1)
