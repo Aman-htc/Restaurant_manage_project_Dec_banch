@@ -20,7 +20,7 @@ class Restaurant_Menu:
     def menu_details(self):
         try:
             self.menu_list = []
-            print('---------Restaurant Menu-------------')
+        
 
             # Define Breakfast menu
             self.Breakfast_menu = [
@@ -144,6 +144,7 @@ class Manage_Restaurant:
                                 index_number =int(index)
                                 self.menu_details[0].pop(index_number)
                                 print('remove successfully!')
+                                break
                                 
                             else:
                                 print('please enter digit number!')
@@ -154,7 +155,9 @@ class Manage_Restaurant:
 
                     # Remove item from lunch menu by index
                     elif staff == 4:
-                        index_number =input('Enter item index number to remove: ')
+                        while True:
+                            
+                            index_number =input('Enter item index number to remove: ')
                             if index_number.isdigit():
                                 index_number =int(index)
                                 self.menu_details[1].pop(index_number)

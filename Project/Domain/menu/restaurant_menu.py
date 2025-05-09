@@ -3,9 +3,9 @@
 import json
 import datetime
 from All_path.path import Menu_path
-# from Domain.Table.table_booking import booked_table
+from Domain.Table.table_booking import booked_cancel
 
-# from Domain.bill_manage.bill import order_item_generate_bill
+from Domain.bill_manage.bill import order_item_generate_bill
 
         
 class Menu_Details:
@@ -18,19 +18,45 @@ class Menu_Details:
     # Display the loaded menu
     def display_menu_details(self):
         try:
+            print('*'*60)
+            print('*'+' RESTAURANT MENU DETAILS'.center(58)+'*')
+            print('*'*60)
             print()
-            print('*******Breakfast menu details*****')
+            print('*'*60)
+            print('*'+'BREAKFAST MENU DETAILS'.center(58)+'*')
+            print('*'*60)
             print()
             # Show Breakfast menu
-            print(json.dumps(self.load_menu[0], indent=4))  
+            
+            print('*'*60)
             print()
-            print('*******Lunch Menu details****')
+            print(f'{'ID':<10} {'Item Name':<24} {'Type':<15} {'Price':<10}')
             print()
+            print('-'*60)
+            for n in self.load_menu[0]:
+                print(f"{n['id']:<10} {n['name']:<24} {n['type']:<15} {n['price']:<10} ")
+                print()
+                print('-'*60)
+            print('='*60)    
+            print()            
+            print('*'*60)
+            print('*'+'LUNCH MENU DETAILS'.center(58)+'*')
+            print('*'*60)
             # Show Lunch menu
-            print(json.dumps(self.load_menu[1], indent=4))  
+            print()
+            print('='*60)
+            print()
+            print(f'{'ID':<10} {'Item Name':<24} {'Type':<15} {'Price':<10}')
+            print()
+            print('-'*60)
+            for n in self.load_menu[1]:
+                print(f"{n['id']:<10} {n['name']:<24} {n['type']:<15} {n['price']:<10} ")
+                print()
+                print('-'*60)
+            print('='*60)    
         except Exception as e:
             date = datetime.datetime.now()
-            error_list = {'error': str(e), 'function_name': 'display_menu_details', 'class': 'Restaurant', 'date': date}
+            error_list = {'error': str(e), 'function_name': 'display_menu_details', 'class': 'Menu_Deatails', 'date': date}
             print('Technical issue please wait!')
 
 # Main function to display menu or book table
@@ -39,8 +65,9 @@ def menu_details():
         print()
         print('=' * 20)
         print('1. Check menu details...')
+        print('2. Table booking....')
         
-        print('2. Exit...')
+        print('3. Exit...')
         print('=' * 20)
         print()
 
@@ -53,10 +80,12 @@ def menu_details():
                 data.display_menu_details()
                 
                 # call the function ordering item and generate bill
-                # order_item_generate_bill() 
+                order_item_generate_bill() 
                 break
             elif so_menu == 2:
-            
+                booked_cancel()
+                break
+            elif so_menu == 3:
                 break
             
             else:
