@@ -1,0 +1,42 @@
+[
+    {
+        "id": "ranjan_3c4cf3",
+        "name": "ranjan",
+        "email": "ran@gmail.com",
+        "contact": "8787989876",
+        "role": "staff",
+        "password": "989898"
+    },
+    {
+        "id": "mukesh_29c360",
+        "name": "mukesh",
+        "email": "mukesh@gmail.com",
+        "contact": "9898787656",
+        "role": "staff",
+        "password": "989876"
+    },
+    {
+        "id": "vishal_84a91b",
+        "name": "vishal",
+        "email": "vishal@gmail.com",
+        "contact": "9878767654",
+        "role": "staff",
+        "password": "988765"
+    },
+    {
+        "id": "suraj_0b00fd",
+        "name": "suraj",
+        "email": "suraj@gmail.com",
+        "contact": "8787676534",
+        "role": "staff",
+        "password": "878767"
+    },
+    {
+        "id": "atul_a6f3ae",
+        "name": "atul",
+        "email": "at@jgmail.com",
+        "contact": "8787876565",
+        "role": "staff",
+        "password": "878765"
+    }
+]
