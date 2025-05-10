@@ -1,0 +1,7 @@
+Sign_up_path=r"Restaurant_manage_project_Dec_banch/Project/Database/admin.json"
+Staff_path=r"Restaurant_manage_project_Dec_banch/Project/Database/staff.json"
+Menu_path=r"Restaurant_manage_project_Dec_banch/Project/Database/menu_details.json"
+Load_amount_path=r"Restaurant_manage_project_Dec_banch/Project/Database/Bill.json"
+Save_order_path=r"Restaurant_manage_project_Dec_banch/Project/Database/order_data.json" 
+table_path=r"Restaurant_manage_project_Dec_banch/Project/Database/table.json"
+
