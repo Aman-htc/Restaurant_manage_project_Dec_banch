@@ -139,15 +139,21 @@ class Manage_Restaurant:
                     elif staff == 3:
                         while True:
                             
-                            index_number =input('Enter item index number to remove: ')
-                            if index_number.isdigit():
-                                index_number =int(index)
-                                self.menu_details[0].pop(index_number)
-                                print('remove successfully!')
-                                break
-                                
+                            self.Id_number =int(input('Enter item Id number to remove: '))
+                            found=False
+                            for item in self.menu_details[0]:
+                                for key,value in item.items():
+                                    if key == 'id':
+                                        if value == self.Id_number:
+                                            self.menu_details[0].remove(item)
+                                            print('remove items successfully!')
+                                            found=True
+                                           
+                            if not found:
+                                print('NO id match!') 
                             else:
-                                print('please enter digit number!')
+                                break                      
+                            
 
                         # Save only breakfast menu to file
                         with open(self.path, 'w') as file:
@@ -156,21 +162,27 @@ class Manage_Restaurant:
                     # Remove item from lunch menu by index
                     elif staff == 4:
                         while True:
-                            
-                            index_number =input('Enter item index number to remove: ')
-                            if index_number.isdigit():
-                                index_number =int(index)
-                                self.menu_details[1].pop(index_number)
-                                print('remove successfully!')
-                                break
+                            self.Id_number =input('Enter item Id number to remove: ')
+                            found=False
+                            for item in self.menu_details[1]:
+                                for key,value in item.items():
+                                    if key == 'id':
+                                        if value == self.Id_number:
+                                            self.menu_details[1].remove(item)
+                                            print('remove items successfully!')
+                                            found=True
+                                    
+                            if not found:
+                                print('NO id match!') 
                             else:
-                                print('please enter digit number!')
-                        # Save full menu again
+                                break     
+                         
+                        # # Save full menu again
                         with open(self.path, 'w') as file:
                             json.dump(self.menu_details, file, indent=4)
 
                     elif staff == 5:
-                        break  # Exit loop
+                        break  
                 else:
                     print('Please enter a valid digit number.')
 

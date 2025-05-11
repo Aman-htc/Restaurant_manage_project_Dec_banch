@@ -3,7 +3,7 @@
 import json
 import datetime
 from All_path.path import Menu_path
-from Domain.Table.table_booking import booked_cancel
+from Domain.Table.table_booking import table_cancel_booked
 
 from Domain.bill_manage.bill import order_item_generate_bill
 
@@ -83,7 +83,7 @@ def menu_details():
                 order_item_generate_bill() 
                 break
             elif so_menu == 2:
-                booked_cancel()
+                table_cancel_booked()
                 break
             elif so_menu == 3:
                 break
