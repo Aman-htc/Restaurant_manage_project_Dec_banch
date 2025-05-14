@@ -24,32 +24,37 @@ class Restaurant_Menu:
 
             # Define Breakfast menu
             self.Breakfast_menu = [
-                {'id': 1, 'type': 'full', 'name': 'aloo paratha-f', 'price': 50},
-                {'id': 2, 'type': 'haph', 'name': 'allo paratha-h', 'price': 30},
-                {'id': 3, 'type': 'full', 'name': 'chana ghugni-f', 'price': 40},
-                {'id': 4, 'type': 'haph', 'name': 'chana ghugani-h', 'price': 20},
-                {'id': 5, 'type': 'full', 'name': 'sattu paratha-f', 'price': 50},
-                {'id': 6, 'type': 'haph', 'name': 'sattu paratha-h', 'price': 30},
-                {'id': 7, 'type': '100g', 'name': 'jalebi-g', 'price': 40},
-                {'id': 8, 'type': 'haph', 'name': 'chai-h', 'price': 20},
-                {'id': 9, 'type': 'full', 'name': 'salad-f', 'price': 40},
-                {'id': 10, 'type': 'haph', 'name': 'salad-h', 'price': 20}
+                {'id': 1, 'type': 'full', 'name': 'aloo paratha', 'price': 50},
+                {'id': 2, 'type': 'haph', 'name': 'aloo paratha', 'price': 30},
+                {'id': 3, 'type': 'full', 'name': 'chana ghugni', 'price': 40},
+                {'id': 4, 'type': 'haph', 'name': 'chana ghugani', 'price': 20},
+                {'id': 5, 'type': 'full', 'name': 'sattu paratha', 'price': 50},
+                {'id': 6, 'type': 'haph', 'name': 'sattu paratha', 'price': 30},
+                {'id': 7, 'type': '100g', 'name': 'jalebi', 'price': 40},
+                {'id': 8, 'type': 'haph', 'name': 'chai', 'price': 20},
+                {'id': 9, 'type': 'full', 'name': 'salad', 'price': 40},
+                {'id': 10, 'type': 'haph', 'name': 'salad', 'price': 20},
+                {'id': 11, 'type': '1ltr', 'name': 'water', 'price': 20}
+                
+                
             ]
 
             # Define Lunch menu
             self.Lunch_menu = [
-                {'id': 1, 'type': 'full', 'name': 'litte chokha-f', 'price': 60},
-                {'id': 2, 'type': 'haph', 'name': 'litte chokha-h', 'price': 30},
-                {'id': 3, 'type': 'full', 'name': 'rice dal-f', 'price': 70},
-                {'id': 4, 'type': 'haph', 'name': 'rice dal-h', 'price': 40},
-                {'id': 5, 'type': 'full', 'name': 'paneer butter masala-f', 'price': 200},
-                {'id': 6, 'type': 'haph', 'name': 'paneer butter masala-h', 'price': 110},
-                {'id': 7, 'type': 'full', 'name': 'shahi paneer-f', 'price': 180},
-                {'id': 8, 'type': 'haph', 'name': 'shahi paneer-h', 'price': 100},
-                {'id': 9, 'type': 'full', 'name': 'plain rice-f', 'price': 50},
-                {'id': 10, 'type': 'haph', 'name': 'roti-h', 'price': 50},
-                {'id': 11, 'type': 'full', 'name': 'kadhi chawal-f', 'price': 120},
-                {'id': 12, 'type': 'haph', 'name': 'kadhi chawal-h', 'price': 70}
+                {'id': 1, 'type': 'full', 'name': 'litte chokha', 'price': 60},
+                {'id': 2, 'type': 'haph', 'name': 'litte chokha', 'price': 30},
+                {'id': 3, 'type': 'full', 'name': 'rice dal', 'price': 70},
+                {'id': 4, 'type': 'haph', 'name': 'rice dal', 'price': 40},
+                {'id': 5, 'type': 'full', 'name': 'paneer butter masala', 'price': 200},
+                {'id': 6, 'type': 'haph', 'name': 'paneer butter masala', 'price': 110},
+                {'id': 7, 'type': 'full', 'name': 'shahi paneer', 'price': 180},
+                {'id': 8, 'type': 'haph', 'name': 'shahi paneer', 'price': 100},
+                {'id': 9, 'type': 'full', 'name': 'plain rice', 'price': 50},
+                {'id': 10, 'type': 'haph', 'name': 'roti', 'price': 50},
+                {'id': 11, 'type': 'full', 'name': 'kadhi chawal', 'price': 120},
+                {'id': 12, 'type': 'haph', 'name': 'kadhi chawal', 'price': 70},
+                {'id': 11, 'type': '1ltr', 'name': 'water', 'price': 20},
+                {'id': 10, 'type': 'haph', 'name': 'salad', 'price': 20},
             ]
 
             # Append both menus to the main list

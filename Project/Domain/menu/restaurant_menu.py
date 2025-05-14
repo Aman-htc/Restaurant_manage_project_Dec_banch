@@ -3,9 +3,9 @@
 import json
 import datetime
 from All_path.path import Menu_path
-from Domain.Table.table_booking import table_cancel_booked
 
-from Domain.bill_manage.bill import order_item_generate_bill
+
+from Domain.Table.table_booking import table_cancel_booked
 
         
 class Menu_Details:
@@ -65,9 +65,8 @@ def menu_details():
         print()
         print('=' * 20)
         print('1. Check menu details...')
-        print('2. Table booking....')
-        
-        print('3. Exit...')
+    
+        print('2. Exit...')
         print('=' * 20)
         print()
 
@@ -79,13 +78,16 @@ def menu_details():
                 data.load_menu_details(Menu_path)
                 data.display_menu_details()
                 
+                # table_cancel_booked()
+                table_cancel_booked()
+                
                 # call the function ordering item and generate bill
-                order_item_generate_bill() 
+                # order_item_generate_bill() 
+                break
+            # elif so_menu == 2:
+                # table_cancel_booked()
                 break
             elif so_menu == 2:
-                table_cancel_booked()
-                break
-            elif so_menu == 3:
                 break
             
             else:
