@@ -1,22 +1,37 @@
 [
     {
-        "table_id": "a4",
-        "customer_name": "aman",
-        "customer_number": 8787878787,
-        "book_table": 3
+        "Table_no": 1,
+        "Available_seat": 5,
+        "Booking_time": null,
+        "name": "aman",
+        "Book_seat": 3
     },
     {
-        "table_id": "7e",
-        "customer_name": "aman",
-        "customer_number": 9898987876,
-        "book_table": 4,
-        "datetime": "2025-05-08 16:04:21.083882"
+        "Table_no": 2,
+        "Available_seat": 5,
+        "Booking_time": null,
+        "name": "3",
+        "Book_seat": 1
     },
     {
-        "table_id": "c2",
-        "customer_name": "aman",
-        "customer_number": 8787987878,
-        "book_table": 4,
-        "datetime": "2025-05-09 20:49:35.059047"
+        "Table_no": 3,
+        "Available_seat": 2,
+        "Booking_time": "2025-05-14 09:18:08",
+        "name": "ranjit",
+        "Book_seat": 3
+    },
+    {
+        "Table_no": 4,
+        "Available_seat": 5,
+        "Booking_time": null,
+        "name": "vishal",
+        "Book_seat": 1
+    },
+    {
+        "Table_no": 5,
+        "Available_seat": 5,
+        "Booking_time": null,
+        "name": null,
+        "Book_seat": null
     }
 ]

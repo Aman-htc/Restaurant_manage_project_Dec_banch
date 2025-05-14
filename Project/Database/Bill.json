@@ -4,5 +4,84 @@
         "Total amount": 55.0,
         "upi": "1223456789",
         "datetime": "2025-05-08 11:43:53.305068"
+    },
+    {
+        "gst amount": 17.0,
+        "Total amount": 187.0,
+        "upi": "8987876765",
+        "datetime": "2025-05-11 09:28:00.502175"
+    },
+    {
+        "gst amount": 2.0,
+        "Total amount": 22.0,
+        "upi": "9898787676",
+        "datetime": "2025-05-12 15:19:29.204921"
+    },
+    {
+        "gst amount": 5.0,
+        "Total amount": 55.0,
+        "upi": "8987876765",
+        "datetime": "2025-05-12 15:52:19.244417",
+        "payment": "online"
+    },
+    {
+        "gst amount": 4.0,
+        "Total amount": 44.0
+    },
+    {
+        "gst amount": 2.0,
+        "Total amount": 22.0,
+        "datetime": "2025-05-12 16:36:10.422186",
+        "payment": "cash"
+    },
+    {
+        "gst amount": 7.0,
+        "Total amount": 77.0,
+        "datetime": "2025-05-12 19:45:42.815006",
+        "payment": "cash"
+    },
+    {
+        "gst amount": 5.0,
+        "Total amount": 55.0,
+        "datetime": "2025-05-13 12:37:13.663388",
+        "payment": "cash"
+    },
+    {
+        "gst amount": 4.0,
+        "Total amount": 44.0,
+        "upi": "8789878767",
+        "datetime": "2025-05-13 13:03:18.324963",
+        "payment": "online"
+    },
+    {
+        "gst amount": 2.0,
+        "Total amount": 22.0,
+        "datetime": "2025-05-13 21:01:29.027947",
+        "payment": "cash"
+    },
+    {
+        "gst amount": 5.0,
+        "Total amount": 55.0,
+        "datetime": "2025-05-13 21:14:31.849517",
+        "payment": "cash"
+    },
+    {
+        "gst amount": 5.0,
+        "Total amount": 55.0,
+        "upi": "2356565657",
+        "datetime": "2025-05-14 06:42:54.597516",
+        "payment": "online"
+    },
+    {
+        "gst amount": 9.0,
+        "Total amount": 99.0,
+        "datetime": "2025-05-14 07:33:57.520880",
+        "payment": "cash"
+    },
+    {
+        "gst amount": 5.0,
+        "Total amount": 55.0,
+        "datetime": "2025-05-14 09:18:17.428345",
+        "payment": "cash"
     }
 ]
