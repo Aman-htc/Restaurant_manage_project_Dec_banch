@@ -1,7 +1,7 @@
 import json
 import time
 import getpass
-
+import msvcrt
 
 from All_path.path import Sign_up_path 
 
@@ -15,9 +15,6 @@ from Domain.menu.management_menu import manage_and_report
 
 from Domain.menu.restaurant_menu import menu_details
 
-# from Domain.order.order_items import order_item_bill_details
-
-# from Domain.staff_manage.management_menu import manage_and_report
 
 import datetime
 
@@ -38,11 +35,29 @@ class Login_Staff:
             error_data={'error':str(e),"funcation_name":'__init__()','class':'Login_User','date':date}
             write_logs(str(error_data))
             print('Technical issue please wait')
+    def get_masked_password(self, prompt=''):
+        print(prompt, end='', flush=True)
+        password = ''
+        while True:
+            ch = msvcrt.getch()
+            if ch in [b'\r', b'\n']:  # Enter
+                print()
+                break
+            elif ch == b'\x08':  # Backspace
+                if password:
+                    password = password[:-1]
+                    print('\b \b', end='', flush=True)
+            elif len(password) < 6:
+                try:
+                    password += ch.decode()
+                    print('.', end='', flush=True)
+                except:
+                    pass
+        return password
+        
                     
     def input_staff(self):
         
-        
-            
         try:
             while True:
             
@@ -62,7 +77,7 @@ class Login_Staff:
                 
                                 
             while True:
-                input_data= getpass.getpass('please enter your password :  ')
+                self.input_data = self.get_masked_password('Enter your 6-character password: ')
         
                 print('Searching',end='')
                 for n in range(5):
@@ -73,7 +88,7 @@ class Login_Staff:
                 found=False
                 for password in self.load_data:
                     for key,value in  password.items():
-                        if key =='password' and value == input_data:
+                        if key =='password' and value == self.input_data:
                             
                             print('Login successfully!')
                             
@@ -170,10 +185,13 @@ def restaurant_menu():
             press_number=int(press_number)
             if press_number == 1:
                 print()
-                data=Staff_User(Staff_path)
-                data.load_user_details()
-                data.input_user_details()
-                data.save_user_data()
+                
+                obj = Staff_User(Staff_path)
+                obj.load_user_details()
+        
+                obj.input_user_details()
+                obj.save_user_data()
+
                 admin_sign()
             elif press_number == 2:
                 print()

@@ -1,128 +1,132 @@
-import json 
+
+import msvcrt
+import json
 import uuid
 import datetime
 from Error_handal.logger import write_logs 
+from All_path.path import Sign_up_path
 
 class Staff_User:
-    def __init__(self,path):
-        self.path=path
-        
-        
-        
-    def load_user_details(self): 
-        """Load existing user data from the JSON database file"""
+    def __init__(self, path):
+        self.path = path  # File path to store user data
+
+    def load_user_details(self):
         try:
-            with open(self.path,'r') as file:
-                self.data_list=json.load(file)
-        except Exception as e:
-            self.data_list=[]        
+            with open(self.path, 'r') as file:
+                self.data_list = json.load(file)  # Load existing user data from file
+        except Exception:
+            self.data_list = []  # If file doesn't exist or fails, initialize empty list
+
     def save_user_data(self):
-        """Save the current user data list in to the JSON database"""
-        
         try:
-            
-            with open(self.path,'w') as file:
-                
-                json.dump(self.data_list,file,indent=4)        
+            with open(self.path, 'w') as file:
+                json.dump(self.data_list, file, indent=4)  # Save user data to file
         except Exception as e:
-            data=datetime.datetime.now()
-            error_data={'error':(str(e)),'time':data,'function name':'save_user_data()'}
-            write_logs(str(error_data))
+            data = datetime.datetime.now()
+            error_data = {
+                'error': str(e),
+                'time': data,
+                'function name': 'save_user_data()'
+            }
+            write_logs(str(error_data))  # Log the error
             print('Technical issue please wait!')
 
-            
+    def get_masked_password(self, prompt=''):
+        print(prompt, end='', flush=True)
+        password = ''
+        while True:
+            ch = msvcrt.getch()  
+            if ch in [b'\r', b'\n']:  
+                print()
+                break
+            elif ch == b'\x08':  # Backspace key
+                if password:
+                    password = password[:-1]  
+                    print('\b \b', end='', flush=True)  
+            elif len(password) < 6:
+                try:
+                    password += ch.decode()  
+                    print('.', end='', flush=True)  
+                except:
+                    pass
+        return password  # Return original password
+
     def input_user_details(self):
-        
-        """
-        Collect user details (name,contact,password,email,rool),
-        Validation input , and store them ina dictionary with unique ID"""
-        
         try:
             while True:
-                    
-                self.store_user={}
-                # Generate a unique 6-character user ID
-                self.Id_user=uuid.uuid4().hex[:6]
+                self.store_user = {}  # Dictionary to store current user details
+                self.Id_user = uuid.uuid4().hex[:6]  # Generate unique 6-digit ID
+
+                # Get staff's name
                 while True:
-                    # input Name
-                    self.user_name=input('please enter your name: ')  
+                    self.user_name = input('please enter your name: ')
                     if self.user_name.isalpha():
-                        self.store_user['id'] = self.user_name+"_"+self.Id_user
+                        self.store_user['id'] = self.user_name + "_" + self.Id_user
                         self.store_user['name'] = self.user_name
                         break
                     else:
-                        print('enter your only character!') 
-                    
+                        print('enter only characters!')
+
+                # Get staff's email
                 while True:
-                    # input Email 
-                    self.user_email=input('please enter your email: ')
-                    if  '@' in self.user_email and '.' in self.user_email:
-                        
+                    self.user_email = input('please enter your email: ')
+                    if '@' in self.user_email and '.' in self.user_email:
                         self.store_user['email'] = self.user_email
                         break
                     else:
-                        print('enter your correct email address!')   
-                            
+                        print('enter a valid email address!')
+
+                # Get staff's contact number
                 while True:
-                    # input Conatct Number
-                    self.user_contact=(input('please enter your contact number: '))
-                    if len(self.user_contact)==10:
-                        if self.user_contact.isdigit():
-                        
+                    self.user_contact = input('Please enter your contact number: ')
+                    if len(self.user_contact) == 10 and self.user_contact.isdigit():
+                        if self.user_contact.count(self.user_contact[0]) != 10:  # Reject repeated digits
                             self.store_user['contact'] = self.user_contact
-                            
                             break
                         else:
-                            print('enter your only digit number!')  
-                            
+                            print("All digits are the same. Please enter a valid contact number.")
                     else:
-                        print('enter your 10 digit number! ')  
-                
-                
+                        print("Please enter a valid 10-digit number.")
+
+                # Get staff's role
                 while True:
-                    # Input Role (admin/user)
-                    self.role=input('please enter your role: ').lower()  
-                    if  self.role == "admin":
-                        self.store_user['role']=self.role
-                        break
-                    elif  self.role == 'staff': 
-                        
-                        self.store_user['role']=self.role
+                    self.role = input('Enter your role: ')
+                    if self.role.lower() == 'staff':
+                        self.store_user['Role'] = self.role
                         break
                     else:
-                        print('please enter your admin/user')
-                        
-                    
+                        print('Please enter only "staff"!')
+
+                # Get staff's password (masked)
                 while True:
-                    # Input Password
-                    self.user_password=input('please enter your password: ')
-                    if len(self.user_password)==6:
-                    
-                        self.store_user['password']=self.user_password
-                        # self.data_list.append(self.store_user)
-                        # print(self.data_list)
-                        
+                    self.user_password = self.get_masked_password('Enter your 6-character password: ')
+                    if len(self.user_password) == 6:
+                        self.store_user['password'] = self.user_password
                         break
                     else:
-                        print('invalid enter your six character!')
-                self.data_list.append(self.store_user) 
-                print('Sing up successfully')       
-                ask_singup=input('Do you want to sing up aas well (yes/no): ').lower()   
-                if  ask_singup !='yes':
-                    break
-                
+                        print('Invalid! Enter exactly 6 characters.')
+
+                # Add staff to list and finish sign-up
+                self.data_list.append(self.store_user)
+                print('Sign up successfully')
+                break
+
         except Exception as e:
-            
-            date=datetime.datetime.now()
-            error_data={'error':(str(e)),'time':data,'function name':'input_user_details()','date':date}
-            write_logs(str(error_data))
+            date = datetime.datetime.now()
+            error_data = {
+                'error': str(e),
+                'time': date,
+                'function name': 'input_user_details()',
+                'date': date
+            }
+            write_logs(str(error_data))  # Log error
             print('Technical issue please wait!')
 
-            
+
 
 class Admin:
-    def __init__(self):
-        self.admin_path=r"Restaurant_management_project/Project/Database/admin.json"
+    def __init__(self,path):
+        self.admin_path=path
         self.admin_list=[]      
     def details_admin(self):
         self.Id_admin=uuid.uuid4().hex[:6]
@@ -144,6 +148,6 @@ class Admin:
 
         
 def admin_sign():
-    data=Admin()        
+    data=Admin(Sign_up_path)        
     data.details_admin()
     data.save_admin()
