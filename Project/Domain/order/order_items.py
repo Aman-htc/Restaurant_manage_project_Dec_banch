@@ -9,6 +9,8 @@ class Restaurant_Order:
     def __init__(self, path):
         self.path = path
         self.total_balance = 0
+        self.store_order_name=[]
+        
 
         # Load menu from file
         with open(self.path, 'r') as file:
@@ -32,11 +34,20 @@ class Restaurant_Order:
 
                     # Breakfast order
                     if order_menu == 1:
+                        print(f'{'ID':<10} {'Item Name':<24} {'Type':<15} {'Price':<10}')
+                        print()
+                        print('-'*60)
+                        for n in self.load_menu_details[0]:
+                            print(f"{n['id']:<10} {n['name']:<24} {n['type']:<15} {n['price']:<10} ")
+                            print()
+                            print('-'*60)
+                        print('='*60)    
                         self.date = datetime.datetime.now()
                         self.list1 = self.load_menu_details[0]
 
                         while True:
                             self.order_item = input('Enter order name: ')
+                            self.type_item=input('enter your type(haph/full): ')
                             print()
                             confirm_order = input('This order is confirm (yes/no): ')
                             if confirm_order.lower() == "yes":
@@ -49,17 +60,28 @@ class Restaurant_Order:
                                 found = False
                                 for order in self.list1:
                                     for key, value in order.items():
-                                        if value == self.order_item:
+                                        if order.get("name") == self.order_item and order.get("type") == self.type_item:
+                                            
+                                            
+                                            
+                                                
+                                        
                                             print('Order is successfully')
-                                            print('Your Order is: ', order)
+                                            print('Your Order is:', order)
                                             self.total_balance += order['price']
+                                            self.amount=order['price']
                                             self.confirm_data = {
                                                 'Item_name': self.order_item,
                                                 'datetime': str(self.date),
-                                                'Order': 'confirm'
+                                                'Order': 'confirm',
+                                                'price':self.amount
                                             }
+                                            
+                                            self.store_order_name.append(self.confirm_data)
+                                            
                                             self.save_order_details.append(self.confirm_data)
                                             found = True
+                                            break
                                 if not found:
                                     print('Item not available!')
 
@@ -78,11 +100,20 @@ class Restaurant_Order:
 
                     # Lunch order
                     elif order_menu == 2:
+                        print(f'{'ID':<10} {'Item Name':<24} {'Type':<15} {'Price':<10}')
+                        print()
+                        print('-'*60)
+                        for n in self.load_menu_details[1]:
+                            print(f"{n['id']:<10} {n['name']:<24} {n['type']:<15} {n['price']:<10} ")
+                            print()
+                            print('-'*60)
+                        print('='*60)    
                         self.date = datetime.datetime.now()
                         self.list2 = self.load_menu_details[1]
 
                         while True:
                             self.order_item = input('Please order item name: ')
+                            self.type_item=input('Enter your type (full/haph): ')
                             print()
                             confirm_order = input('Confirm order (yes/no): ')
                             print()
@@ -96,17 +127,23 @@ class Restaurant_Order:
                                 found = False
                                 for order in self.list2:
                                     for key, value in order.items():
-                                        if value == self.order_item:
+                                        
+                                        if order.get("name") == self.order_item and order.get("type") == self.type_item:
+                                           
                                             print('Order is successfully')
                                             print('Your Order is:', order)
                                             self.total_balance += order['price']
+                                            self.amount=order['price']
                                             self.confirm_data = {
                                                 'Item_name': self.order_item,
                                                 'datetime': str(self.date),
-                                                'Order': 'confirm'
+                                                'Order': 'confirm',
+                                                'price':self.amount
                                             }
+                                            self.store_order_name.append(self.confirm_data)
                                             self.save_order_details.append(self.confirm_data)
                                             found = True
+                                            break
                                 if not found:
                                     print('Item not available!')
                             else:
