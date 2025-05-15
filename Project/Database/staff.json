@@ -110,5 +110,21 @@
         "contact": "9898787654",
         "Role": "staff",
         "password": "999999"
+    },
+    {
+        "id": "manjit_d858ee",
+        "name": "manjit",
+        "email": "manjit@gmail.com",
+        "contact": "8787987980",
+        "Role": "staff",
+        "password": "999999"
+    },
+    {
+        "id": "ramu_2bb402",
+        "name": "ramu",
+        "email": "ramu@gmail.com",
+        "contact": "8787676545",
+        "Role": "staff",
+        "password": "979797"
     }
 ]
