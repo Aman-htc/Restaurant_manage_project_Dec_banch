@@ -15,7 +15,7 @@ class Staff_User:
             with open(self.path, 'r') as file:
                 self.data_list = json.load(file)  # Load existing user data from file
         except Exception:
-            self.data_list = []  # If file doesn't exist or fails, initialize empty list
+            self.data_list = [] 
 
     def save_user_data(self):
         try:
@@ -54,8 +54,9 @@ class Staff_User:
     def input_user_details(self):
         try:
             while True:
-                self.store_user = {}  # Dictionary to store current user details
-                self.Id_user = uuid.uuid4().hex[:6]  # Generate unique 6-digit ID
+                self.store_user = {} 
+                # Generate unique 6-digit ID 
+                self.Id_user = uuid.uuid4().hex[:6]  
 
                 # Get staff's name
                 while True:
@@ -95,7 +96,7 @@ class Staff_User:
                         self.store_user['Role'] = self.role
                         break
                     else:
-                        print('Please enter only "staff"!')
+                        print('Please enter only staff"!')
 
                 # Get staff's password (masked)
                 while True:

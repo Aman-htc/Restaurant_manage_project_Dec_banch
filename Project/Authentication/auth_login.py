@@ -89,8 +89,10 @@ class Login_Staff:
                 for password in self.load_data:
                     for key,value in  password.items():
                         if key =='password' and value == self.input_data:
-                            
                             print('Login successfully!')
+                            
+                            
+                            
                             
                 
                             found=True
