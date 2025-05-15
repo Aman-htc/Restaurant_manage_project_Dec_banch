@@ -1,0 +1,137 @@
+[
+    {
+        "Item_name": "sattu paratha",
+        "datetime": "2025-05-14 07:33:57.520880",
+        "Order": "confirm",
+        "price": 50
+    },
+    {
+        "Item_name": "salad",
+        "datetime": "2025-05-14 07:33:57.520880",
+        "Order": "confirm",
+        "price": 40
+    },
+    {
+        "Item_name": "aloo paratha",
+        "datetime": "2025-05-14 09:18:17.428345",
+        "Order": "confirm",
+        "price": 50
+    },
+    {
+        "Item_name": "water",
+        "datetime": "2025-05-14 14:41:08.894465",
+        "Order": "confirm",
+        "price": 20
+    },
+    {
+        "Item_name": "shahi paneer",
+        "datetime": "2025-05-14 14:44:49.862615",
+        "Order": "confirm",
+        "price": 180
+    },
+    {
+        "Item_name": "sattu paratha",
+        "datetime": "2025-05-14 15:07:22.171020",
+        "Order": "confirm",
+        "plate": 3,
+        "price": 150
+    },
+    {
+        "Item_name": "sattu paratha",
+        "datetime": "2025-05-14 15:14:17.438659",
+        "Order": "confirm",
+        "plate": 2,
+        "price": 100
+    },
+    {
+        "Item_name": "water",
+        "datetime": "2025-05-14 15:14:17.438659",
+        "Order": "confirm",
+        "plate": 1,
+        "price": 20
+    },
+    {
+        "Item_name": "litte chokha",
+        "datetime": "2025-05-14 15:16:14.037490",
+        "Order": "confirm",
+        "plate": 2,
+        "price": 120
+    },
+    {
+        "Item_name": "water",
+        "datetime": "2025-05-14 15:16:14.037490",
+        "Order": "confirm",
+        "plate": 1,
+        "price": 20
+    },
+    {
+        "Item_name": "sattu paratha",
+        "datetime": "2025-05-14 15:17:19.448807",
+        "Order": "confirm",
+        "plate": 1,
+        "price": 30
+    },
+    {
+        "Item_name": "water",
+        "datetime": "2025-05-14 19:20:46.977416",
+        "Order": "confirm",
+        "plate": 1,
+        "price": 20
+    },
+    {
+        "item_id": 10,
+        "Item_name": "salad",
+        "Quantity": 2,
+        "datetime": "2025-05-15 07:43:56.632415",
+        "Order": "confirm",
+        "price": 40
+    },
+    {
+        "item_id": 11,
+        "Item_name": "water",
+        "Quantity": 1,
+        "datetime": "2025-05-15 07:43:56.632415",
+        "Order": "confirm",
+        "price": 20
+    },
+    {
+        "item_id": 6,
+        "Item_name": "Sattu Paratha",
+        "Quantity": 1,
+        "datetime": "2025-05-15 08:09:12.486292",
+        "Order": "confirm",
+        "price": 30
+    },
+    {
+        "item_id": 13,
+        "Item_name": "Mix Sabji",
+        "Quantity": 1,
+        "datetime": "2025-05-15 08:10:04.108820",
+        "Order": "confirm",
+        "price": 50
+    },
+    {
+        "item_id": 15,
+        "Item_name": "Dahi",
+        "Quantity": 1,
+        "datetime": "2025-05-15 11:41:00.772398",
+        "Order": "confirm",
+        "price": 40
+    },
+    {
+        "item_id": 12,
+        "Item_name": "Kadhi Chawal",
+        "Quantity": 1,
+        "datetime": "2025-05-15 11:42:21.415774",
+        "Order": "confirm",
+        "price": 70
+    },
+    {
+        "item_id": 11,
+        "Item_name": "Water Bottle",
+        "Quantity": 1,
+        "datetime": "2025-05-15 12:13:08.809058",
+        "Order": "confirm",
+        "price": 20
+    }
+]

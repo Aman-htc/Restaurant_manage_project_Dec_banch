@@ -1,0 +1,37 @@
+[
+    {
+        "Table_no": 1,
+        "Available_seat": 5,
+        "Booking_time": null,
+        "name": null,
+        "Book_seat": null
+    },
+    {
+        "Table_no": 2,
+        "Available_seat": 2,
+        "Booking_time": "2025-05-15 12:12:49",
+        "name": "aman",
+        "Book_seat": 3
+    },
+    {
+        "Table_no": 3,
+        "Available_seat": 3,
+        "Booking_time": "2025-05-15 12:13:02",
+        "name": "viaha",
+        "Book_seat": 2
+    },
+    {
+        "Table_no": 4,
+        "Available_seat": 5,
+        "Booking_time": null,
+        "name": null,
+        "Book_seat": null
+    },
+    {
+        "Table_no": 5,
+        "Available_seat": 5,
+        "Booking_time": null,
+        "name": null,
+        "Book_seat": null
+    }
+]

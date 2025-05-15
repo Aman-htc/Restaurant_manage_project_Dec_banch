@@ -1,0 +1,130 @@
+[
+    {
+        "id": "ranjan_3c4cf3",
+        "name": "ranjan",
+        "email": "ran@gmail.com",
+        "contact": "8787989876",
+        "role": "staff",
+        "password": "989898"
+    },
+    {
+        "id": "mukesh_29c360",
+        "name": "mukesh",
+        "email": "mukesh@gmail.com",
+        "contact": "9898787656",
+        "role": "staff",
+        "password": "989876"
+    },
+    {
+        "id": "vishal_84a91b",
+        "name": "vishal",
+        "email": "vishal@gmail.com",
+        "contact": "9878767654",
+        "role": "staff",
+        "password": "988765"
+    },
+    {
+        "id": "suraj_0b00fd",
+        "name": "suraj",
+        "email": "suraj@gmail.com",
+        "contact": "8787676534",
+        "role": "staff",
+        "password": "878767"
+    },
+    {
+        "id": "atul_a6f3ae",
+        "name": "atul",
+        "email": "at@jgmail.com",
+        "contact": "8787876565",
+        "role": "staff",
+        "password": "878765"
+    },
+    {
+        "id": "vishal_954e62",
+        "name": "vishal",
+        "email": "vishal@gmail.com",
+        "contact": "0000000000",
+        "role": "admin",
+        "password": "767676"
+    },
+    {
+        "id": "vishal_2f723f",
+        "name": "vishal",
+        "email": "vishal@gmail.com",
+        "contact": "8787878787",
+        "role": "staff",
+        "password": "878769"
+    },
+    {
+        "id": "aman_0e94d6",
+        "name": "aman",
+        "email": "aman@gmail.com",
+        "contact": "8989878767",
+        "role": "staff",
+        "password": "878787"
+    },
+    {
+        "id": "mukes_f1495a",
+        "name": "mukes",
+        "email": "muke@gmail.com",
+        "contact": "8787876765",
+        "role": "staff",
+        "password": "878787"
+    },
+    {
+        "id": "suraj_4baaef",
+        "name": "suraj",
+        "email": "suraj@gmail.com",
+        "contact": "8787876765",
+        "role": "staff",
+        "password": "878787"
+    },
+    {
+        "id": "ramesh_ea7b18",
+        "name": "ramesh",
+        "email": "rames@gmail.com",
+        "contact": "9898789876",
+        "Role": "staff",
+        "password": "989090"
+    },
+    {
+        "id": "dhiraj_4a1130",
+        "name": "dhiraj",
+        "email": "dhir@gmail.com",
+        "contact": "9898787676",
+        "Role": "staff",
+        "password": "898989"
+    },
+    {
+        "id": "ranjit_214f32",
+        "name": "ranjit",
+        "email": "ran@gmail.com",
+        "contact": "9898989878",
+        "Role": "staff",
+        "password": "987654"
+    },
+    {
+        "id": "dhiraj_6be6f3",
+        "name": "dhiraj",
+        "email": "dhir@gmail.com",
+        "contact": "9898787654",
+        "Role": "staff",
+        "password": "999999"
+    },
+    {
+        "id": "manjit_d858ee",
+        "name": "manjit",
+        "email": "manjit@gmail.com",
+        "contact": "8787987980",
+        "Role": "staff",
+        "password": "999999"
+    },
+    {
+        "id": "ramu_2bb402",
+        "name": "ramu",
+        "email": "ramu@gmail.com",
+        "contact": "8787676545",
+        "Role": "staff",
+        "password": "979797"
+    }
+]
