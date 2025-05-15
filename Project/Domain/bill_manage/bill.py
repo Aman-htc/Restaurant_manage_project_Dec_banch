@@ -32,8 +32,12 @@ class Save_Amount(Save_Order):
                     print()
                     print('This is your bill sir/madam')
                     print('=' * 30)
+                    print(f'{'Quantity':<10} {'Item_name':<15} {'price'}')
+                    print('-'*40)
                     for n in self.store_order_name:
-                        print('Order name: ',n['Item_name'],"   price:", n['price'])
+                        print(f'{n['Quantity']:<10}{n['Item_name']:<15}{n['price']}')
+                        print('-'*40)
+                    print()    
                     
 
                     print('All Items Amount is :', self.total_balance)
