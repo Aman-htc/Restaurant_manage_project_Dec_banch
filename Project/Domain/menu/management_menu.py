@@ -24,38 +24,41 @@ class Restaurant_Menu:
 
             # Define Breakfast menu
             self.Breakfast_menu = [
-                {'id': 1, 'type': 'full', 'name': 'aloo paratha', 'price': 50},
-                {'id': 2, 'type': 'haph', 'name': 'aloo paratha', 'price': 30},
-                {'id': 3, 'type': 'full', 'name': 'chana ghugni', 'price': 40},
-                {'id': 4, 'type': 'haph', 'name': 'chana ghugani', 'price': 20},
-                {'id': 5, 'type': 'full', 'name': 'sattu paratha', 'price': 50},
-                {'id': 6, 'type': 'haph', 'name': 'sattu paratha', 'price': 30},
-                {'id': 7, 'type': '100g', 'name': 'jalebi', 'price': 40},
-                {'id': 8, 'type': 'haph', 'name': 'chai', 'price': 20},
-                {'id': 9, 'type': 'full', 'name': 'salad', 'price': 40},
-                {'id': 10, 'type': 'haph', 'name': 'salad', 'price': 20},
-                {'id': 11, 'type': '1ltr', 'name': 'water', 'price': 20}
-                
-                
-            ]
+                    {'id': 1, 'type': 'full', 'name': 'Aloo Paratha', 'price': 50},
+                    {'id': 2, 'type': 'half', 'name': 'Aloo Paratha', 'price': 30},
+                    {'id': 3, 'type': 'full', 'name': 'Chana Ghugni', 'price': 40},
+                    {'id': 4, 'type': 'half', 'name': 'Chana Ghugni', 'price': 20},
+                    {'id': 5, 'type': 'full', 'name': 'Sattu Paratha', 'price': 50},
+                    {'id': 6, 'type': 'half', 'name': 'Sattu Paratha', 'price': 30},
+                    {'id': 7, 'type': '100g', 'name': 'Jalebi', 'price': 40},
+                    {'id': 8, 'type': 'half', 'name': 'Chai', 'price': 20},
+                    {'id': 9, 'type': 'full', 'name': 'Salad', 'price': 40},
+                    {'id': 10, 'type': 'half', 'name': 'Salad', 'price': 20},
+                    {'id': 11, 'type': '1ltr', 'name': 'Water Bottle', 'price': 20},
+                    {'id':12,'type': 'full','name':'Chola Bhatura','price':70},
+                    {'id':13,'type':'full','name':'Mix Sabji','price':50}
+                ]
 
             # Define Lunch menu
             self.Lunch_menu = [
-                {'id': 1, 'type': 'full', 'name': 'litte chokha', 'price': 60},
-                {'id': 2, 'type': 'haph', 'name': 'litte chokha', 'price': 30},
-                {'id': 3, 'type': 'full', 'name': 'rice dal', 'price': 70},
-                {'id': 4, 'type': 'haph', 'name': 'rice dal', 'price': 40},
-                {'id': 5, 'type': 'full', 'name': 'paneer butter masala', 'price': 200},
-                {'id': 6, 'type': 'haph', 'name': 'paneer butter masala', 'price': 110},
-                {'id': 7, 'type': 'full', 'name': 'shahi paneer', 'price': 180},
-                {'id': 8, 'type': 'haph', 'name': 'shahi paneer', 'price': 100},
-                {'id': 9, 'type': 'full', 'name': 'plain rice', 'price': 50},
-                {'id': 10, 'type': 'haph', 'name': 'roti', 'price': 50},
-                {'id': 11, 'type': 'full', 'name': 'kadhi chawal', 'price': 120},
-                {'id': 12, 'type': 'haph', 'name': 'kadhi chawal', 'price': 70},
-                {'id': 11, 'type': '1ltr', 'name': 'water', 'price': 20},
-                {'id': 10, 'type': 'haph', 'name': 'salad', 'price': 20},
-            ]
+                    {'id': 1, 'type': 'full', 'name': 'Litti Chokha', 'price': 60},
+                    {'id': 2, 'type': 'half', 'name': 'Litti Chokha', 'price': 30},
+                    {'id': 3, 'type': 'full', 'name': 'Rice Dal', 'price': 70},
+                    {'id': 4, 'type': 'half', 'name': 'Rice Dal', 'price': 40},
+                    {'id': 5, 'type': 'full', 'name': 'Paneer Butter Masala', 'price': 200},
+                    {'id': 6, 'type': 'half', 'name': 'Paneer Butter Masala', 'price': 110},
+                    {'id': 7, 'type': 'full', 'name': 'Shahi Paneer', 'price': 180},
+                    {'id': 8, 'type': 'half', 'name': 'Shahi Paneer', 'price': 100},
+                    {'id': 9, 'type': 'full', 'name': 'Plain Rice', 'price': 50},
+                    {'id': 10, 'type': 'half', 'name': 'Roti (2 pcs)', 'price': 50},
+                    {'id': 11, 'type': 'full', 'name': 'Kadhi Chawal', 'price': 120},
+                    {'id': 12, 'type': 'half', 'name': 'Kadhi Chawal', 'price': 70},
+                    {'id': 13, 'type': 'half', 'name': 'Salad', 'price': 20},
+                    {'id': 14, 'type': '1ltr', 'name': 'Water Bottle', 'price': 20},
+                    {'id':13,'type':'full','name':'Mix Sabji','price':50},
+                    {'id':14, 'type': 'full','name':'Dahi','price':80},
+                    {'id':15, 'type': 'half','name':'Dahi','price':40}
+                ]
 
             # Append both menus to the main list
             self.menu_list.append(self.Breakfast_menu)
@@ -64,6 +67,8 @@ class Restaurant_Menu:
         except Exception as e:
             date = datetime.datetime.now()
             error_list = {'error': str(e), 'function_name': 'menu_details', 'class': 'Restaurant', 'date': date}
+            write_logs(str(error_list))
+            print('Technical issue please wait!')
 
 # call Restaurant menu 
 def menu_item():
@@ -109,7 +114,7 @@ class Manage_Restaurant:
                         self.item_price = int(input('Enter your item price: '))
                         self.item_category = input('Enter your type (haph ya full): ')
                         self.item_list['id'] = self.item_Id
-                        self.item_list['item'] = self.item_name
+                        self.item_list['name'] = self.item_name
                         self.item_list['price'] = self.item_price
                         self.item_list['type'] = self.item_category
                         # Add to breakfast menu
@@ -129,7 +134,7 @@ class Manage_Restaurant:
                         self.item_price = int(input('Enter your item price: '))
                         self.item_category = input('Enter your type (haph ya full): ')
                         self.item_list['id'] = self.item_Id
-                        self.item_list['item'] = self.item_name
+                        self.item_list['name'] = self.item_name
                         self.item_list['price'] = self.item_price
                         self.item_list['type'] = self.item_category  
                     
@@ -230,6 +235,7 @@ def manage_and_report():
             else:
                 print('Select correct option (1/2/3)')
         except Exception as e:
-            print('Please enter a valid digit!')
+            
+            print('Technical issue please wait!')
 
  

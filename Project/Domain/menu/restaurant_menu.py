@@ -3,6 +3,7 @@
 import json
 import datetime
 from All_path.path import Menu_path
+from Error_handal.logger import write_logs
 
 
 from Domain.Table.table_booking import table_cancel_booked
@@ -57,6 +58,7 @@ class Menu_Details:
         except Exception as e:
             date = datetime.datetime.now()
             error_list = {'error': str(e), 'function_name': 'display_menu_details', 'class': 'Menu_Deatails', 'date': date}
+            write_logs(str(error_list))
             print('Technical issue please wait!')
 
 # Main function to display menu or book table
@@ -81,11 +83,8 @@ def menu_details():
                 # table_cancel_booked()
                 table_cancel_booked()
                 
-                # call the function ordering item and generate bill
-                # order_item_generate_bill() 
-                break
-            # elif so_menu == 2:
-                # table_cancel_booked()
+                
+            
                 break
             elif so_menu == 2:
                 break
