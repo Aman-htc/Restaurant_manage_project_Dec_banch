@@ -126,5 +126,13 @@
         "contact": "8787676545",
         "Role": "staff",
         "password": "979797"
+    },
+    {
+        "id": "mukesh_708564",
+        "name": "mukesh",
+        "email": "00@00.com",
+        "contact": "9898765654",
+        "Role": "staff",
+        "password": "999999"
     }
 ]
