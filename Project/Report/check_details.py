@@ -4,7 +4,8 @@ import json
 import datetime
 
 from Error_handal.logger import write_logs
-from All_path.path import  Load_amount_path, Save_order_path, Staff_path
+from All_path.path import  Load_amount_path, Save_order_path, Staff_path,table_booked_details
+
 
 # # Parent class
 class Check_Staff:
@@ -194,50 +195,87 @@ def amount_check():
             print('enter your only digit number(1/2/3)')
     
                 
-    
-            
+# Check book table funcation 
+def table_details(path):
+    table_path = path  # Make sure 'path' variable is set to your JSON file path
+
+    with open(table_path, 'r') as file:
+        table_load = json.load(file)
+
+    num_days = int(input("Enter the number of past days to view table details: "))
+
+    today = datetime.datetime.now().date()
+    start_date = today - datetime.timedelta(days=num_days)
+
+    found = False
+
+    for order in table_load:
+        order_time_str = order.get("datetime", "")
+        try:
+            order_datetime = datetime.datetime.strptime(order_time_str, "%Y-%m-%d %H:%M:%S")
+        except Exception:
+            continue
+
+        order_date = order_datetime.date()
+
+        if start_date <= order_date <= today:
+            print(json.dumps(order, indent=4))
+            found = True
+
+    if not found:
+        print("No bookings found in the given date range.")
+
+                     
 
 
 
 # Main function to check various data types
 def all_data_check():
-    while True:
-        print('='*30)
-        print()
-        print('1. Amount details check..')
-        print('2. Order item check..')
-        print('3. Staff details check...')
-        print('4. Exit...')
-        print()
-        print('='*30)
+    try:
+        
+        while True:
+            print('='*30)
+            print()
+            print('1. Amount details check..')
+            print('2. Order item check..')
+            print('3. Staff details check...')
+            print('4. Check book table!')
+            print('5. Exit...')
+            print()
+            print('='*30)
 
-    
-        # Prompting user to select an option
-        select = int(input('Select any option: '))
+        
+            # Prompting user to select an option
+            select = int(input('Select any option: '))
 
-        # Option 1: Load and display amount data
-        if select == 1:
-            amount_check()
+            # Option 1: Load and display amount data
+            if select == 1:
+                amount_check()
+                
             
-          
-        # Option 2: Load and display order data
-        elif select == 2:
-            
-            order_data()
-            
-        # Option 3: Load and display staff data
-        elif select == 3:
-            data = Check_Staff()
-            data.admin_data(Staff_path)
-            
-            data.all_display_store_data()
-            
-        # Option 5: Exit the loop
-        elif select == 4:
-            break
+            # Option 2: Load and display order data
+            elif select == 2:
+                
+                order_data()
+                
+            # Option 3: Load and display staff data
+            elif select == 3:
+                data = Check_Staff()
+                data.admin_data(Staff_path)
+                
+                data.all_display_store_data()
+                
+            # Option 5: Exit the loop
+            elif select == 4:
+                table_details(table_booked_details)
+            elif select == 5:
+                break    
 
-        # Invalid input case
-        else:
-            print('enter your digit number or not invalid number!')
-       
-       
+            # Invalid input case
+            else:
+                print('enter your digit number or not invalid number!')
+    except Exception as e:
+        error_list={'error':str(e),"funcation name":'all data check'}     
+        write_logs(str(error_list))
+        print('Technical issue please wait')
+        
