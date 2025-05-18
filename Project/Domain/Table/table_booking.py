@@ -97,11 +97,24 @@ class Table_Booking:
                                     self.confirm_seat={'name':self.input_name,'book_seat':self.input_seat_no,'table_no':self.input_table_no ,'datetime': booking_time }
                                     self.load_table_booked.append(self.confirm_seat)
                                     found = True
-                                    break
+                                    order_item_generate_bill()
+                                
+                                       
+                    
                         if not found:
-                            print(" Table not found or no seats!")
+                            print("There is no seat available at this table!")
+                            print()
+                            self.ask_book=input('Would you like to book another table(yes/no): ')
+                            if self.ask_book.lower()=='yes':
+                                continue
+                            elif self.ask_book.lower() == 'no':
+                                break
+                           
+                            
                         else:
+                            
                             break
+                            
                     else:
                         print('enter your digit number!')    
                 else:
@@ -155,7 +168,9 @@ def table_cancel_booked():
                 select_option = int(select_option)
                 if select_option == 1:
                     booked_table()
-                    order_item_generate_bill()
+                    
+                    
+                    break    
                 elif select_option == 2:
                     tableset()
                 
