@@ -39,14 +39,7 @@
         "role": "staff",
         "password": "878765"
     },
-    {
-        "id": "vishal_954e62",
-        "name": "vishal",
-        "email": "vishal@gmail.com",
-        "contact": "0000000000",
-        "role": "admin",
-        "password": "767676"
-    },
+    
     {
         "id": "vishal_2f723f",
         "name": "vishal",
@@ -134,5 +127,13 @@
         "contact": "9898765654",
         "Role": "staff",
         "password": "999999"
+    },
+    {
+        "id": "raj_d38d21",
+        "name": "raj",
+        "email": "raj@gmail.com",
+        "contact": "8787676543",
+        "Role": "staff",
+        "password": "989898"
     }
 ]

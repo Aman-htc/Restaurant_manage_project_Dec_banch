@@ -1,272 +1,63 @@
 [
     {
-        "gst amount": 5.0,
-        "Total amount": 55.0,
-        "upi": "1223456789",
-        "datetime": "2025-05-08 11:43:53.305068"
-    },
-    {
-        "gst amount": 17.0,
-        "Total amount": 187.0,
-        "upi": "8987876765",
-        "datetime": "2025-05-11 09:28:00.502175"
-    },
-    {
-        "gst amount": 2.0,
-        "Total amount": 22.0,
-        "upi": "9898787676",
-        "datetime": "2025-05-12 15:19:29.204921"
-    },
-    {
-        "gst amount": 5.0,
-        "Total amount": 55.0,
-        "upi": "8987876765",
-        "datetime": "2025-05-12 15:52:19.244417",
-        "payment": "online"
-    },
-    {
-        "gst amount": 4.0,
-        "Total amount": 44.0
-    },
-    {
-        "gst amount": 2.0,
-        "Total amount": 22.0,
-        "datetime": "2025-05-12 16:36:10.422186",
-        "payment": "cash"
-    },
-    {
-        "gst amount": 7.0,
-        "Total amount": 77.0,
-        "datetime": "2025-05-12 19:45:42.815006",
-        "payment": "cash"
-    },
-    {
-        "gst amount": 5.0,
-        "Total amount": 55.0,
-        "datetime": "2025-05-13 12:37:13.663388",
-        "payment": "cash"
-    },
-    {
-        "gst amount": 4.0,
-        "Total amount": 44.0,
-        "upi": "8789878767",
-        "datetime": "2025-05-13 13:03:18.324963",
-        "payment": "online"
-    },
-    {
-        "gst amount": 2.0,
-        "Total amount": 22.0,
-        "datetime": "2025-05-13 21:01:29.027947",
-        "payment": "cash"
-    },
-    {
-        "gst amount": 5.0,
-        "Total amount": 55.0,
-        "datetime": "2025-05-13 21:14:31.849517",
-        "payment": "cash"
-    },
-    {
-        "gst amount": 5.0,
-        "Total amount": 55.0,
-        "upi": "2356565657",
-        "datetime": "2025-05-14 06:42:54.597516",
-        "payment": "online"
-    },
-    {
-        "gst amount": 9.0,
-        "Total amount": 99.0,
-        "datetime": "2025-05-14 07:33:57.520880",
-        "payment": "cash"
-    },
-    {
-        "gst amount": 5.0,
-        "Total amount": 55.0,
-        "datetime": "2025-05-14 09:18:17.428345",
-        "payment": "cash"
-    },
-    {
-        "gst amount": 2.0,
-        "Total amount": 22.0,
-        "upi": "8787090989",
-        "datetime": "2025-05-14 14:41:08.894465",
-        "payment": "online"
-    },
-    {
-        "gst amount": 18.0,
-        "Total amount": 198.0,
-        "datetime": "2025-05-14 14:44:49.862615",
-        "payment": "cash"
-    },
-    {
-        "gst amount": 15.0,
-        "Total amount": 165.0,
-        "datetime": "2025-05-14 15:07:22.171020",
-        "payment": "cash"
-    },
-    {
-        "gst amount": 12.0,
-        "Total amount": 132.0,
-        "datetime": "2025-05-14 15:14:17.438659",
-        "payment": "cash"
-    },
-    {
-        "gst amount": 17.0,
-        "Total amount": 187.0,
-        "datetime": "2025-05-14 15:17:19.448807",
-        "payment": "cash"
-    },
-    {
-        "gst amount": 2.0,
-        "Total amount": 22.0,
-        "upi": "8987876765",
-        "datetime": "2025-05-14 19:20:46.977416",
-        "payment": "online"
-    },
-    {
-        "gst amount": 6.0,
-        "Total amount": 66.0,
-        "datetime": "2025-05-15 07:43:56.632415",
-        "payment": "cash"
-    },
-    {
-        "gst amount": 8.0,
-        "Total amount": 88.0,
-        "datetime": "2025-05-15 08:10:04.108820",
-        "payment": "cash"
-    },
-    {
-        "gst amount": 11.0,
-        "Total amount": 121.0,
-        "upi": "8787876565",
-        "datetime": "2025-05-15 11:42:21.415774",
-        "payment": "online"
-    },
-    {
-        "gst amount": 2.0,
-        "Total amount": 22.0,
-        "datetime": "2025-05-15 12:13:08.809058",
-        "payment": "cash"
-    },
-    {
-        "gst amount": 4.0,
-        "Total amount": 44.0,
-        "datetime": "2025-05-15 12:27:45.450006",
-        "payment": "cash"
-    },
-    {
-        "gst amount": 7.0,
-        "Total amount": 77.0,
-        "upi": "8787676565",
-        "datetime": "2025-05-15 14:54:40.632154",
-        "payment": "online"
-    },
-    {
-        "gst amount": 17.0,
-        "Total amount": 187.0,
-        "datetime": "2025-05-15 15:49:01.053228",
-        "payment": "cash"
-    },
-    {
-        "gst amount": 7.0,
-        "Total amount": 77.0,
-        "datetime": "2025-05-15 15:51:22.727056",
-        "payment": "cash"
-    },
-    {
-        "gst amount": 7.0,
-        "Total amount": 77.0,
-        "upi": "0000000000",
-        "datetime": "2025-05-15 15:54:16.637798",
-        "payment": "online"
-    },
-    {
-        "gst amount": 7.0,
-        "Total amount": 77.0,
-        "datetime": "2025-05-15 17:08:27.456897",
-        "payment": "cash"
-    },
-    {
-        "gst amount": 7.0,
-        "Total amount": 77.0,
-        "datetime": "2025-05-15 17:35:10.184978",
-        "payment": "cash"
-    },
-    {
-        "gst amount": 2.0,
-        "Total amount": 22.0,
-        "upi": "9898787676",
-        "datetime": "2025-05-15 17:55:12.400161",
-        "payment": "online"
-    },
-    {
-        "gst amount": 5.0,
-        "Total amount": 55.0,
-        "upi": "8787wtr657",
-        "datetime": "2025-05-15 17:57:02.655891",
-        "payment": "online"
-    },
-    {
-        "gst amount": 5.0,
-        "Total amount": 55.0,
-        "upi": "2389878767",
-        "datetime": "2025-05-15 18:47:53.412125",
-        "payment": "online"
-    },
-    {
-        "gst amount": 20.0,
-        "Total amount": 220.0,
-        "datetime": "2025-05-15 18:50:25.351612",
-        "payment": "cash"
-    },
-    {
-        "gst amount": 12.0,
-        "Total amount": 132.0,
-        "upi": "9898787676",
-        "datetime": "2025-05-16 05:06:35.898258",
-        "payment": "online"
-    },
-    {
-        "gst amount": 4.0,
-        "Total amount": 44.0,
-        "datetime": "2025-05-16 05:38:54.386101",
-        "payment": "cash"
-    },
-    {
-        "gst amount": 10.0,
-        "Total amount": 110.0,
-        "datetime": "2025-05-16 06:07:11.606796",
-        "payment": "cash"
-    },
-    {
-        "gst amount": 4.0,
-        "Total amount": 44.0,
-        "datetime": "2025-05-16 06:26:47.187257",
-        "payment": "cash"
-    },
-    {
-        "gst amount": 2.0,
-        "Total amount": 22.0,
-        "datetime": "2025-05-16 08:49:06.517950",
-        "payment": "cash"
-    },
-    {
-        "gst amount": 12.0,
-        "Total amount": 132.0,
-        "datetime": "2025-05-16 08:54:10.546650",
-        "payment": "cash"
-    },
-    {
-        "gst amount": 4.0,
-        "Total amount": 44.0,
-        "datetime": "2025-05-16 10:52:26.298983",
-        "payment": "cash"
-    },
-    {
         "Customer_name": "rajsingh",
         "gst amount": 14.0,
         "Total amount": 154.0,
         "upi": "7876765654",
         "datetime": "2025-05-16 10:59:34.504356",
         "payment": "online"
+    },
+    {
+        "Customer_name": "aman",
+        "gst amount": 14.0,
+        "Total amount": 154.0,
+        "upi": "9898787654",
+        "datetime": "2025-05-16 13:21:44.691003",
+        "payment": "online"
+    },
+    {
+        "Customer_name": "suraj",
+        "gst amount": 10.0,
+        "Total amount": 110.0,
+        "upi": "8787676543",
+        "datetime": "2025-05-16 20:49:02.724076",
+        "payment": "online"
+    },
+    {
+        "Customer_name": "raj",
+        "gst amount": 10.0,
+        "Total amount": 110.0,
+        "datetime": "2025-05-16 21:45:10.129987",
+        "payment": "cash"
+    },
+    {
+        "Customer_name": "dhiraj",
+        "gst amount": 10.0,
+        "Total amount": 110.0,
+        "upi": "8787676543",
+        "datetime": "2025-05-17 07:59:07.182154",
+        "payment": "online"
+    },
+    {
+        "Customer_name": "dhiraj",
+        "gst amount": 8.0,
+        "Total amount": 88.0,
+        "datetime": "2025-05-18 05:46:45.045764",
+        "payment": "cash"
+    },
+    {
+        "Customer_name": "sibgh",
+        "gst amount": 18.0,
+        "Total amount": 198.0,
+        "upi": "8987876765",
+        "datetime": "2025-05-18 05:49:35.658768",
+        "payment": "online"
+    },
+    {
+        "Customer_name": "ramveer",
+        "gst amount": 2.0,
+        "Total amount": 22.0,
+        "datetime": "2025-05-18 06:59:10.524084",
+        "payment": "cash"
     }
 ]
