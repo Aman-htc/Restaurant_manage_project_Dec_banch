@@ -234,6 +234,7 @@ def manage_and_report():
             else:
                 print('Select correct option (1/2/3)')
         except Exception as e:
+            print(e)
             error_list={'error':str(e),'funcation name':'manage_and_report()'}
             write_logs(str(error_list))
             

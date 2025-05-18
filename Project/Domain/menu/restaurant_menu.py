@@ -7,6 +7,7 @@ from Error_handal.logger import write_logs
 
 
 from Domain.Table.table_booking import table_cancel_booked
+from Report.check_details import order_data
 
         
 class Menu_Details:
@@ -67,8 +68,9 @@ def menu_details():
         print()
         print('=' * 20)
         print('1. Check menu details...')
+        print('2. Check Order details..')
     
-        print('2. Exit...')
+        print('3. Exit...')
         print('=' * 20)
         print()
 
@@ -85,9 +87,11 @@ def menu_details():
                 
                 
             
-                break
+                
             elif so_menu == 2:
-                break
+                order_data()
+            elif so_menu == 3:
+                break    
             
             else:
                 print('Select correct option (1/2/3)')
