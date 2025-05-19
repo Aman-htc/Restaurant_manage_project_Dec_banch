@@ -32,6 +32,11 @@ class Save_Amount(Save_Order):
                     print()
                     print('This is your bill sir/madam')
                     print('=' * 30)
+                    print()
+                    
+                    print('Customer Name: ',self.confirm_data["user_name"])
+                    self.name=self.confirm_data['user_name']
+                    
                     print(f'{'Quantity':<10} {'Item_name':<15} {'price'}')
                     print('-'*40)
                     for n in self.store_order_name:
@@ -65,31 +70,36 @@ class Save_Amount(Save_Order):
                             # Ask for UPI number
                             self.upi_number = input('Enter your UPI number: ')
                             if len(self.upi_number) == 10:
-                                # Prepare the bill dictionary to save
-                                self.add_amount['gst amount'] = gst_amount
-                                self.add_amount['Total amount'] = Total_amount
-                                self.add_amount['upi'] = self.upi_number
-                                self.add_amount['datetime'] = str(self.date)
-                                self.add_amount['payment']='online'
+                                if  self.upi_number.count(self.upi_number[0]) != 10:
+                                    
+                                    # Prepare the bill dictionary to save
+                                    self.add_amount['Customer_name']=self.name
+                                    self.add_amount['gst amount'] = gst_amount
+                                    self.add_amount['Total amount'] = Total_amount
+                                    self.add_amount['upi'] = self.upi_number
+                                    self.add_amount['datetime'] = str(self.date)
+                                    self.add_amount['payment']='online'
 
-                                # Ask for payment
-                                self.money = input('Please enter your money: ')
-                                if self.money.isdigit():
-                                    self.money = float(self.money)
+                                    # Ask for payment
+                                    self.money = input('Please enter your money: ')
+                                    if self.money.isdigit():
+                                        self.money = float(self.money)
 
-                                    # Check if paid amount is correct
-                                    if self.money == Total_amount:
-                                        self.bill_amount_list.append(self.add_amount)
+                                        # Check if paid amount is correct
+                                        if self.money == Total_amount:
+                                            self.bill_amount_list.append(self.add_amount)
 
-                                        print('Payment Successfully!')
-                                        print()
-                                        print('Thanks')
-                                        print()
-                                        break
+                                            print('Payment Successfully!')
+                                            print()
+                                            print('Thanks')
+                                            print()
+                                            break
+                                        else:
+                                            print('Please enter the exact total amount')  
                                     else:
-                                        print('Please enter the exact total amount')  
+                                        print('Only numeric values are allowed!')  
                                 else:
-                                    print('Only numeric values are allowed!')    
+                                    print('correct upi number!')          
                             else:
                                 print('Enter a 10-digit UPI number!')
                                 
@@ -101,7 +111,7 @@ class Save_Amount(Save_Order):
                                 self.money = float(self.money)
                                 if self.money == Total_amount:
                                 
-                                    
+                                    self.add_amount['Customer_name']=self.name
                                     self.add_amount['gst amount'] = gst_amount
                                     self.add_amount['Total amount'] = Total_amount
                                 

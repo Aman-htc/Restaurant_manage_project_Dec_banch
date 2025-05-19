@@ -55,9 +55,9 @@ class Restaurant_Menu:
                     {'id': 12, 'type': 'half', 'name': 'Kadhi Chawal', 'price': 70},
                     {'id': 13, 'type': 'half', 'name': 'Salad', 'price': 20},
                     {'id': 14, 'type': '1ltr', 'name': 'Water Bottle', 'price': 20},
-                    {'id':13,'type':'full','name':'Mix Sabji','price':50},
-                    {'id':14, 'type': 'full','name':'Dahi','price':80},
-                    {'id':15, 'type': 'half','name':'Dahi','price':40}
+                    {'id':15,'type':'full','name':'Mix Sabji','price':50},
+                    {'id':16, 'type': 'full','name':'Dahi','price':80},
+                    {'id':17, 'type': 'half','name':'Dahi','price':40}
                 ]
 
             # Append both menus to the main list
@@ -172,7 +172,7 @@ class Manage_Restaurant:
                     # Remove item from lunch menu by index
                     elif staff == 4:
                         while True:
-                            self.Id_number =input('Enter item Id number to remove: ')
+                            self.Id_number =int(input('Enter item Id number to remove: '))
                             found=False
                             for item in self.menu_details[1]:
                                 for key,value in item.items():
@@ -181,12 +181,11 @@ class Manage_Restaurant:
                                             self.menu_details[1].remove(item)
                                             print('remove items successfully!')
                                             found=True
-                                    
+                                           
                             if not found:
                                 print('NO id match!') 
                             else:
-                                break     
-                         
+                                break       
                         # # Save full menu again
                         with open(self.path, 'w') as file:
                             json.dump(self.menu_details, file, indent=4)
@@ -235,6 +234,9 @@ def manage_and_report():
             else:
                 print('Select correct option (1/2/3)')
         except Exception as e:
+            print(e)
+            error_list={'error':str(e),'funcation name':'manage_and_report()'}
+            write_logs(str(error_list))
             
             print('Technical issue please wait!')
 

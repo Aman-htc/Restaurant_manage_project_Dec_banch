@@ -68,8 +68,8 @@ class Login_Staff:
                         if key == 'email' and value == input_data:
                             
                             
-                        
                             found=True
+                        
                 if not found:
                     print('No match invalid email please try again!') 
                 else:
@@ -88,19 +88,17 @@ class Login_Staff:
                 found=False
                 for password in self.load_data:
                     for key,value in  password.items():
-                        if key =='password' and value == self.input_data:
-                            print('Login successfully!')
+                        if key =='password':
+                            if value == self.input_data:
+                                
                             
-                            
-                            
-                            
-                
-                            found=True
+                                found=True
                 
                 if not found:
                     print('No match invalid password please try again!') 
                 else:
-                   break                
+                   break   
+            print('Login successfully!')                
         except Exception as e:
             data=datetime.datetime.now()            
             error_data={'error':str(e),"funcation_name":' input_user()','class':'Login_User','date':data}

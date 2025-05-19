@@ -55,6 +55,12 @@
             "price": 40
         },
         {
+            "id": 10,
+            "type": "half",
+            "name": "Salad",
+            "price": 20
+        },
+        {
             "id": 11,
             "type": "1ltr",
             "name": "Water Bottle",
@@ -159,19 +165,19 @@
             "price": 20
         },
         {
-            "id": 13,
+            "id": 15,
             "type": "full",
             "name": "Mix Sabji",
             "price": 50
         },
         {
-            "id": 14,
+            "id": 16,
             "type": "full",
             "name": "Dahi",
             "price": 80
         },
         {
-            "id": 15,
+            "id": 17,
             "type": "half",
             "name": "Dahi",
             "price": 40

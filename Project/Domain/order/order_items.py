@@ -19,6 +19,13 @@ class Restaurant_Order:
     # Main order method
     def order(self):
         while True:
+            self.name=input('Enter your name: ')
+            if self.name.isalpha():
+                break
+            else:
+                print('Enter only characters')    
+        
+        while True:
             print()
             print('=' * 30)
             print('1. Breakfast item order...')
@@ -46,6 +53,8 @@ class Restaurant_Order:
                         self.list1 = self.load_menu_details[0]
 
                         while True:
+                            
+                            
                             self.order_item =(input('Enter Item ID: '))
                             if self.order_item.isdigit():
                                 self.order_item=int(self.order_item)
@@ -77,6 +86,7 @@ class Restaurant_Order:
                                                         self.amount=order['price']*self.count_plate
                                                         self.itme_name=order['name']
                                                         self.confirm_data = {
+                                                            'user_name':self.name,
                                                             'item_id':self.order_item,
                                                             'Item_name': self.itme_name,
                                                             'Quantity':self.count_plate,
@@ -94,6 +104,7 @@ class Restaurant_Order:
                                     else:
                                         print('Your order is canceled!')
                                         self.cancel_data = {
+                                            'user_name':self.name,
                                             'Item_name': self.order_item,
                                             'datetime': str(self.date),
                                             'Order': 'cancel'
@@ -103,9 +114,23 @@ class Restaurant_Order:
                                     print('Enter your digit number!')        
                             else:
                                 print('Enter your digit number!')
-                            ask_order = input('Order more? (yes/no): ')
-                            if ask_order.lower() != 'yes':
-                                break
+                            
+                            
+                            while True:        
+                                ask_order = input('Order more? (yes/no): ')
+                                if ask_order.isalpha():
+                                    if ask_order.lower() =='yes':
+                                        break
+                                    elif  ask_order.lower() =='no':
+                                        break
+                                    else:
+                                        print('Enter your only (yes/no)')
+                                else:
+                                    print('enter your only (yes/no)!')
+                            if ask_order.lower() == 'yes':
+                                continue
+                            elif ask_order.lower() =='no': 
+                                break       
 
                     # Lunch order
                     elif order_menu == 2:
@@ -121,6 +146,9 @@ class Restaurant_Order:
                         self.list2 = self.load_menu_details[1]
 
                         while True:
+                            
+                            
+                                
                             self.order_item = (input('Enter Item ID: '))
                             if self.order_item.isdigit():
                                 self.order_item=int(self.order_item)
@@ -147,11 +175,12 @@ class Restaurant_Order:
                                                         
                                                 
                                                         print('Order is successfully')
-                                                        print('Your Order is:', order)
+                                                        print()
                                                         self.total_balance += order['price']*self.count_plate
                                                         self.amount=order['price']*self.count_plate
                                                         self.itme_name=order['name']
                                                         self.confirm_data = {
+                                                            'user_name':self.name,
                                                             'item_id':self.order_item,
                                                             'Item_name': self.itme_name,
                                                             'Quantity':self.count_plate,
@@ -169,19 +198,36 @@ class Restaurant_Order:
                                     else:
                                         print('Your order is canceled!')
                                         self.cancel_data = {
+                                            'user':self.name,
                                             'Item_name': self.order_item,
                                             'datetime': str(self.date),
                                             'Order': 'cancel'
                                         }
                                         self.save_order_details.append(self.cancel_data)
+                                    
+                                           
                                 else:
                                     print('Enter your digit number!')
                                             
                             else:
                                 print('Enter your digit number!')
-                            ask_order = input('Order more? (yes/no): ')
-                            if ask_order.lower() != 'yes':
-                                break
+                            
+                                
+                            while True:        
+                                ask_order = input('Order more? (yes/no): ')
+                                if ask_order.isalpha():
+                                    if ask_order.lower() =='yes':
+                                        break
+                                    elif  ask_order.lower() =='no':
+                                        break
+                                    else:
+                                        print('Enter your only (yes/no)')
+                                else:
+                                    print('enter your only (yes/no)!')
+                            if ask_order.lower() == 'yes':
+                                continue
+                            elif ask_order.lower() =='no': 
+                                break       
                     else:
                         print('Enter 1 or 2 only!')
                 else:
@@ -200,11 +246,21 @@ class Restaurant_Order:
                 print('Technical issue. Please wait!')
 
             # Ask to go back
-            back_to_menu = input('Back to menu (yes/no): ')
-            print()
-            if back_to_menu.lower() != 'yes':
-                break
-
+            while True:        
+                back_to_menu = input('Back_to_menu? (yes/no): ')
+                if back_to_menu.isalpha():
+                    if back_to_menu.lower() =='yes':
+                        break
+                    elif  back_to_menu.lower() =='no':
+                        break
+                    else:
+                        print('Enter your only (yes/no)')
+                else:
+                    print('enter your only (yes/no)!')
+            if back_to_menu.lower() == 'yes':
+                continue
+            elif back_to_menu.lower() =='no': 
+                break       
 
 
 class Save_Order(Restaurant_Order):

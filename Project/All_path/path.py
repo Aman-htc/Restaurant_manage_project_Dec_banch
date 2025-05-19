@@ -4,4 +4,5 @@ Menu_path=r"Restaurant_manage_project_Dec_banch/Project/Database/menu_details.js
 Load_amount_path=r"Restaurant_manage_project_Dec_banch/Project/Database/Bill.json"
 Save_order_path=r"Restaurant_manage_project_Dec_banch/Project/Database/order_data.json" 
 table_path=r"Restaurant_manage_project_Dec_banch/Project/Database/table.json"
+table_booked_details=r"Restaurant_manage_project_Dec_banch/project/Database/table_book_details.json"
 
