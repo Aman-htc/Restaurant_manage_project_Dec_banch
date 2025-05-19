@@ -108,6 +108,27 @@ class Manage_Restaurant:
 
                     # Add item to breakfast menu
                     if staff == 1:
+                        print('*'*60)
+                        print('*'+' RESTAURANT MENU DETAILS'.center(58)+'*')
+                        print('*'*60)
+                        print()
+                        print('*'*60)
+                        print('*'+'BREAKFAST MENU DETAILS'.center(58)+'*')
+                        print('*'*60)
+                        print()
+                        # Show Breakfast menu
+                        
+                        print('*'*60)
+                        print()
+                        print(f'{'ID':<10} {'Item Name':<24} {'Type':<15} {'Price':<10}')
+                        print()
+                        print('-'*60)
+                        for n in self.menu_details[0]:
+                            print(f"{n['id']:<10} {n['name']:<24} {n['type']:<15} {n['price']:<10} ")
+                            print()
+                            print('-'*60)
+                        print('='*60)    
+                        print()            
                         self.item_list = {}
                         self.item_Id = int(input('Enter your item id: '))
                         self.item_name = input('Enter your item name: ')
@@ -128,6 +149,21 @@ class Manage_Restaurant:
 
                     # Add item to lunch menu
                     elif staff == 2:
+                        print('*'*60)
+                        print('*'+'LUNCH MENU DETAILS'.center(58)+'*')
+                        print('*'*60)
+                        # Show Lunch menu
+                        print()
+                        print('='*60)
+                        print()
+                        print(f'{'ID':<10} {'Item Name':<24} {'Type':<15} {'Price':<10}')
+                        print()
+                        print('-'*60)
+                        for n in  self.menu_details[1]:
+                            print(f"{n['id']:<10} {n['name']:<24} {n['type']:<15} {n['price']:<10} ")
+                            print()
+                            print('-'*60)
+                        print('='*60)    
                         self.item_list = {}
                         self.item_Id = int(input('Enter your item id: '))
                         self.item_name = input('Enter your item name: ')
@@ -147,6 +183,22 @@ class Manage_Restaurant:
 
                     # Remove item from breakfast menu by index
                     elif staff == 3:
+                        print()
+                        print('*'*60)
+                        print('*'+'BREAKFAST MENU DETAILS'.center(58)+'*')
+                        print('*'*60)
+                        print()
+                        # Show Breakfast menu
+                        
+                        print('*'*60)
+                        print()
+                        print(f'{'ID':<10} {'Item Name':<24} {'Type':<15} {'Price':<10}')
+                        print()
+                        print('-'*60)
+                        for n in self.menu_details[0]:
+                            print(f"{n['id']:<10} {n['name']:<24} {n['type']:<15} {n['price']:<10} ")
+                            print()
+                            print('-'*60)
                         while True:
                             
                             self.Id_number =int(input('Enter item Id number to remove: '))
@@ -171,6 +223,21 @@ class Manage_Restaurant:
 
                     # Remove item from lunch menu by index
                     elif staff == 4:
+                        print('*'*60)
+                        print('*'+'LUNCH MENU DETAILS'.center(58)+'*')
+                        print('*'*60)
+                        # Show Lunch menu
+                        print()
+                        print('='*60)
+                        print()
+                        print(f'{'ID':<10} {'Item Name':<24} {'Type':<15} {'Price':<10}')
+                        print()
+                        print('-'*60)
+                        for n in  self.menu_details[1]:
+                            print(f"{n['id']:<10} {n['name']:<24} {n['type']:<15} {n['price']:<10} ")
+                            print()
+                            print('-'*60)
+                        print('='*60)  
                         while True:
                             self.Id_number =int(input('Enter item Id number to remove: '))
                             found=False
@@ -210,6 +277,61 @@ class Manage_Restaurant:
 def item_manage():
     data = Manage_Restaurant(Menu_path)
     data.manage_item()
+    
+    
+    
+class Menu_Details:
+    # Load menu from JSON file
+    def load_menu_details(self,path):
+        self.path=path
+        with open(self.path, 'r') as file:
+            self.load_menu = json.load(file)
+
+    # Display the loaded menu
+    def display_menu_details(self):
+        try:
+            print('*'*60)
+            print('*'+' RESTAURANT MENU DETAILS'.center(58)+'*')
+            print('*'*60)
+            print()
+            print('*'*60)
+            print('*'+'BREAKFAST MENU DETAILS'.center(58)+'*')
+            print('*'*60)
+            print()
+            # Show Breakfast menu
+            
+            print('*'*60)
+            print()
+            print(f'{'ID':<10} {'Item Name':<24} {'Type':<15} {'Price':<10}')
+            print()
+            print('-'*60)
+            for n in self.load_menu[0]:
+                print(f"{n['id']:<10} {n['name']:<24} {n['type']:<15} {n['price']:<10} ")
+                print()
+                print('-'*60)
+            print('='*60)    
+            print()            
+            print('*'*60)
+            print('*'+'LUNCH MENU DETAILS'.center(58)+'*')
+            print('*'*60)
+            # Show Lunch menu
+            print()
+            print('='*60)
+            print()
+            print(f'{'ID':<10} {'Item Name':<24} {'Type':<15} {'Price':<10}')
+            print()
+            print('-'*60)
+            for n in self.load_menu[1]:
+                print(f"{n['id']:<10} {n['name']:<24} {n['type']:<15} {n['price']:<10} ")
+                print()
+                print('-'*60)
+            print('='*60)    
+        except Exception as e:
+            date = datetime.datetime.now()
+            error_list = {'error': str(e), 'function_name': 'display_menu_details', 'class': 'Menu_Deatails', 'date': date}
+            write_logs(str(error_list))
+            print('Technical issue please wait!')
+    
 
 # Function to manage restaurant system: either update menu or view reports
 def manage_and_report():
