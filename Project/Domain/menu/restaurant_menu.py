@@ -61,6 +61,11 @@ class Menu_Details:
             error_list = {'error': str(e), 'function_name': 'display_menu_details', 'class': 'Menu_Deatails', 'date': date}
             write_logs(str(error_list))
             print('Technical issue please wait!')
+def check_menu():
+    data=Menu_Details()
+    data.load_menu_details(Menu_path)
+    data.display_menu_details()
+                
 
 # Main function to display menu or book table
 def menu_details():
@@ -78,9 +83,10 @@ def menu_details():
         if so_menu.isdigit():
             so_menu = int(so_menu)
             if so_menu == 1:
-                data=Menu_Details()
-                data.load_menu_details(Menu_path)
-                data.display_menu_details()
+                check_menu()
+                # data=Menu_Details()
+                # data.load_menu_details(Menu_path)
+                # data.display_menu_details()
                 
                 # table_cancel_booked()
                 table_cancel_booked()
