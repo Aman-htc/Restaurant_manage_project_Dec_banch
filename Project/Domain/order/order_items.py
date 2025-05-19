@@ -55,67 +55,67 @@ class Restaurant_Order:
                         while True:
                             
                             
-                            self.order_item =(input('Enter Item ID: '))
-                            if self.order_item.isdigit():
-                                self.order_item=int(self.order_item)
+                            self.order_item =input('Enter Item ID: ')
                             
-                                self.count_plate=(input('Enter your quantity : '))
-                                if self.count_plate.isdigit():
-                                    self.count_plate=int(self.count_plate)
+                            # if self.order_item.isalpha():
+                                #  self.order_item=int(self.order_item)
+                            
+                            self.count_plate=(input('Enter your quantity : '))
+                            if self.count_plate.isdigit():
+                                self.count_plate=int(self.count_plate)
+                                print()
+                                confirm_order = input('This Order is Confirm  (yes/no): ')
+                                print()
+                                if confirm_order.lower() == 'yes':
+                                    print('Order searching', end='')
+                                    for n in range(5):
+                                        time.sleep(1)
+                                        print('.', end='')
                                     print()
-                                    confirm_order = input('This Order is Confirm  (yes/no): ')
-                                    print()
-                                    if confirm_order.lower() == 'yes':
-                                        print('Order searching', end='')
-                                        for n in range(5):
-                                            time.sleep(1)
-                                            print('.', end='')
-                                        print()
 
-                                        found = False
-                                        for order in self.list1:
-                                            for key, value in order.items():
-                                                if key == 'id':
-                                                    if value == self.order_item:
-                                                
-                                                
-                                                
-                                                        print('Order is successfully')
-                                                        print()
-                                                        self.total_balance += order['price']*self.count_plate
-                                                        self.amount=order['price']*self.count_plate
-                                                        self.itme_name=order['name']
-                                                        self.confirm_data = {
-                                                            'user_name':self.name,
-                                                            'item_id':self.order_item,
-                                                            'Item_name': self.itme_name,
-                                                            'Quantity':self.count_plate,
-                                                            'datetime': str(self.date),
-                                                            'Order': 'confirm',
-                                                            
-                                                            'price':self.amount
-                                                        }
-                                                        self.store_order_name.append(self.confirm_data)
-                                                        self.save_order_details.append(self.confirm_data)
-                                                        found = True
-                                                        break
-                                        if not found:
-                                            print('Item not available!')
-                                    else:
-                                        print('Your order is canceled!')
-                                        self.cancel_data = {
-                                            'user_name':self.name,
-                                            'Item_name': self.order_item,
-                                            'datetime': str(self.date),
-                                            'Order': 'cancel'
-                                        }
-                                        self.save_order_details.append(self.cancel_data)
+                                    found = False
+                                    for order in self.list1:
+                                        for key, value in order.items():
+                                            if key == 'id':
+                                                if value == self.order_item:
+                                            
+                                            
+                                            
+                                                    print('Order is successfully')
+                                                    print()
+                                                    self.total_balance += order['price']*self.count_plate
+                                                    self.amount=order['price']*self.count_plate
+                                                    self.itme_name=order['name']
+                                                    self.confirm_data = {
+                                                        'user_name':self.name,
+                                                        'item_id':self.order_item,
+                                                        'Item_name': self.itme_name,
+                                                        'Quantity':self.count_plate,
+                                                        'datetime': str(self.date),
+                                                        'Order': 'confirm',
+                                                        
+                                                        'price':self.amount
+                                                    }
+                                                    self.store_order_name.append(self.confirm_data)
+                                                    self.save_order_details.append(self.confirm_data)
+                                                    found = True
+                                                    break
+                                    if not found:
+                                        print('Item not available!')
                                 else:
-                                    print('Enter your digit number!')        
+                                    print('Your order is canceled!')
+                                    self.cancel_data = {
+                                        'user_name':self.name,
+                                        'Item_name': self.order_item,
+                                        'datetime': str(self.date),
+                                        'Order': 'cancel'
+                                    }
+                                    self.save_order_details.append(self.cancel_data)
                             else:
-                                print('Enter your digit number!')
+                                print('Enter your digit number!')        
+                        
                             
-                            
+                        
                             while True:        
                                 ask_order = input('Order more? (yes/no): ')
                                 if ask_order.isalpha():
@@ -149,70 +149,68 @@ class Restaurant_Order:
                             
                             
                                 
-                            self.order_item = (input('Enter Item ID: '))
-                            if self.order_item.isdigit():
-                                self.order_item=int(self.order_item)
+                            self.order_item = input('Enter Item ID: ')
                             
-                                self.count_plate=(input('Enter your quantity : '))
-                                if self.count_plate.isdigit():
-                                    self.count_plate=int(self.count_plate)
+                            
+                            self.count_plate=(input('Enter your quantity : '))
+                            if self.count_plate.isdigit():
+                                self.count_plate=int(self.count_plate)
+                                print()
+                                confirm_order = input('This Order is Confirm  (yes/no): ')
+                                print()
+                                if confirm_order.lower() == 'yes':
+                                    print('Order searching', end='')
+                                    for n in range(5):
+                                        time.sleep(1)
+                                        print('.', end='')
                                     print()
-                                    confirm_order = input('This Order is Confirm  (yes/no): ')
-                                    print()
-                                    if confirm_order.lower() == 'yes':
-                                        print('Order searching', end='')
-                                        for n in range(5):
-                                            time.sleep(1)
-                                            print('.', end='')
-                                        print()
 
-                                        found = False
-                                        for order in self.list2:
-                                            for key, value in order.items():
-                                                
-                                                if key == 'id':
-                                                    if value == self.order_item:
-                                                        
-                                                
-                                                        print('Order is successfully')
-                                                        print()
-                                                        self.total_balance += order['price']*self.count_plate
-                                                        self.amount=order['price']*self.count_plate
-                                                        self.itme_name=order['name']
-                                                        self.confirm_data = {
-                                                            'user_name':self.name,
-                                                            'item_id':self.order_item,
-                                                            'Item_name': self.itme_name,
-                                                            'Quantity':self.count_plate,
-                                                            'datetime': str(self.date),
-                                                            'Order': 'confirm',
-                                                            
-                                                            'price':self.amount
-                                                        }
-                                                        self.store_order_name.append(self.confirm_data)
-                                                        self.save_order_details.append(self.confirm_data)
-                                                        found = True
-                                                        break
-                                        if not found:
-                                            print('Item not available!')
-                                    else:
-                                        print('Your order is canceled!')
-                                        self.cancel_data = {
-                                            'user':self.name,
-                                            'Item_name': self.order_item,
-                                            'datetime': str(self.date),
-                                            'Order': 'cancel'
-                                        }
-                                        self.save_order_details.append(self.cancel_data)
-                                    
-                                           
-                                else:
-                                    print('Enter your digit number!')
+                                    found = False
+                                    for order in self.list2:
+                                        for key, value in order.items():
                                             
+                                            if key == 'id':
+                                                if value == self.order_item:
+                                                    
+                                            
+                                                    print('Order is successfully')
+                                                    print()
+                                                    self.total_balance += order['price']*self.count_plate
+                                                    self.amount=order['price']*self.count_plate
+                                                    self.itme_name=order['name']
+                                                    self.confirm_data = {
+                                                        'user_name':self.name,
+                                                        'item_id':self.order_item,
+                                                        'Item_name': self.itme_name,
+                                                        'Quantity':self.count_plate,
+                                                        'datetime': str(self.date),
+                                                        'Order': 'confirm',
+                                                        
+                                                        'price':self.amount
+                                                    }
+                                                    self.store_order_name.append(self.confirm_data)
+                                                    self.save_order_details.append(self.confirm_data)
+                                                    found = True
+                                                    break
+                                    if not found:
+                                        print('Item not available!')
+                                else:
+                                    print('Your order is canceled!')
+                                    self.cancel_data = {
+                                        'user':self.name,
+                                        'Item_name': self.order_item,
+                                        'datetime': str(self.date),
+                                        'Order': 'cancel'
+                                    }
+                                    self.save_order_details.append(self.cancel_data)
+                                
+                                        
                             else:
                                 print('Enter your digit number!')
+                                        
+                        
+                        
                             
-                                
                             while True:        
                                 ask_order = input('Order more? (yes/no): ')
                                 if ask_order.isalpha():
