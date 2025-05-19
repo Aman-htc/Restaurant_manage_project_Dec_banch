@@ -110,16 +110,7 @@ class Manage_Restaurant:
                     # Add item to breakfast menu
                     if staff == 1:
                        
-                        print()
-                        print(f'{'ID':<10} {'Item Name':<24} {'Type':<15} {'Price':<10}')
-                        print()
-                        print('-'*60)
-                        for n in self.menu_details[0]:
-                            print(f"{n['id']:<10} {n['name']:<24} {n['type']:<15} {n['price']:<10} ")
-                            print()
-                            print('-'*60)
-                        print('='*60)    
-                        print()            
+                                   
                         self.item_list = {}
                         self.item_Id = int(input('Enter your item id: '))
                         self.item_name = input('Enter your item name: ')
@@ -245,7 +236,7 @@ def manage_and_report():
         try:
             input_number = int(input('Select any option: '))
             if input_number == 1:
-                menu_item()
+                # menu_item()
                 # Open item manager
                 item_manage()  
             elif input_number == 2:
